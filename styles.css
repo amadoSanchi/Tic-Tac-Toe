@@ -1,0 +1,160 @@
+
+@font-face {
+	font-family: "quicksand";
+    src: url(fonts/quicksand-regular-webfont.woff2) format("woff2");
+}
+
+/* || VARIABLES */
+
+:root {
+    --DARK-BEIGE: #D27B28;
+    --LIGHT-BEIGE: #FAD289;
+    --MULTICOLOR-BEIGE: linear-gradient(
+        -45deg,
+        #fff7ed,
+        #ffedd5,
+        #fed7aa,
+        #fdba74
+    );
+}
+
+/* || BODY */
+
+body {
+    background: linear-gradient(
+        90deg,
+        #fff7ed,
+        #ffedd5,
+        #fed7aa,
+        #fdba74
+    );
+    display: flex;
+    flex-direction: column;
+    font-family: "quicksand", "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    height: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* || HEADER */
+
+header {
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    font-style: italic;
+    height: 3rem;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: relative;
+}
+
+#reset {
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: inherit;
+    margin-right: 0.5rem;
+}
+
+#reset:hover {
+    border-color: hsl(360, 0%, 75%);
+    color: hsl(360, 0%, 75%);
+}
+
+#reset:active {
+    border-color: red;
+    color: red;
+}
+
+#logo {
+    left: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: absolute;
+    right: 0; 
+    width: 200px;
+}
+
+.points-label {
+    color: violet;
+}
+
+.player-label:first-of-type {
+    margin-right: 2rem;
+}
+
+/* || MAIN */
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main > h2 {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+#gameboard {
+    background-color: var(--DARK-BEIGE);
+    border-radius: 10px;
+    border: 2px solid black;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    height: 360px;
+    width: 360px;
+}
+
+#gameboard > * {
+    align-items: center;
+    background: linear-gradient(
+        -45deg,
+        #fff7ed,
+        #ffedd5,
+        #fed7aa,
+        #fdba74
+    );
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+#box1 {
+    background-image: url(resources/seashell1.png);
+    background-size: cover;
+}
+*/
+
+#main__div {
+    align-items: center;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    width: 100%;
+}
+
+.players {
+    background-color: black;
+    color: violet;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 1rem;
+}
+
+/* || MEDIA QUERIES */
+
+@media (max-width: 991px) {
+    #logo {
+        display: none;
+    }
+}
